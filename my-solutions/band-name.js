@@ -1,31 +1,21 @@
 // global array to store band names
 let storeBandNames = [];
 
-// 3 refactoring
-
+// 3 refactoring - make it DRY
 // function for color to capitalize first letter and to lowercase the rest of word
-function capitalizeColor(clothingColor) {
-  let color =
-    clothingColor[0].toUpperCase() + clothingColor.substring(1).toLowerCase();
-  return color;
-}
-
-// function for food to capitalize first letter and to lowercase the rest of word
-function capitalizeFood(lastFoodEaten) {
-  let food =
-    lastFoodEaten[0].toUpperCase() + lastFoodEaten.substring(1).toLowerCase();
-  return food;
+function capitalizeInitial(userWord) {
+  let word = userWord[0].toUpperCase() + userWord.substring(1).toLowerCase();
+  return word;
 }
 
 // 4 refactoring - add new function makeTasty
-
 // function for make it tasty
-function makeTasty(color) {
-  const colorInitial = color[0].toUpperCase();
-  const colorRest = color.substr(1).toLowerCase();
-  const colors = colorInitial.concat(colorRest);
+function makeTasty(userColor) {
+  const colorInitial = userColor[0].toUpperCase();
+  const colorRest = userColor.substr(1).toLowerCase();
+  const color = colorInitial.concat(colorRest);
 
-  switch (colors) {
+  switch (color) {
     case "Red":
       return "Chilli";
       break;
@@ -45,26 +35,26 @@ function makeTasty(color) {
       return "Plum";
       break;
     default:
-      return color;
+      return userColor;
   }
 }
 
 // function declaration to generate band name
 function generateBandName(clothingColor, lastFoodEaten) {
-  let color = capitalizeColor(clothingColor);
-  let food = capitalizeFood(lastFoodEaten);
+  // capitalize first letter of color and food
+  let color = capitalizeInitial(clothingColor);
+  let food = capitalizeInitial(lastFoodEaten);
+  // add a result to an array
+  let bandName = `The ${makeTasty(color)} ${food}`;
+  storeBandNames.push(bandName);
 
-  // return the result
-  return `The ${makeTasty(color)} ${food}`;
-  // return `The ${color} ${food}`;
+  return bandName;
 }
 
-// call and push result to an array
-storeBandNames.push(generateBandName("blue", "bAnana"));
-storeBandNames.push(generateBandName("green", "appLe"));
-storeBandNames.push(generateBandName("violet", "pizza"));
-storeBandNames.push(generateBandName("Black", "Cookies"));
-storeBandNames.push(generateBandName("Yellow", "spaghetti"));
+// call generateBandName function with arguments
+generateBandName("blue", "bAnana");
+generateBandName("GREEN", "APPLE");
+generateBandName("black", "Cookies");
 
 // print array with all results of band name
 console.log(storeBandNames);
