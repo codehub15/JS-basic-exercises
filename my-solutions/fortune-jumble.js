@@ -18,13 +18,19 @@
 
 // Good luck!
 
-function randomElementPicker(array) {
-  const index = Math.floor(Math.random() * array.length);
+// solution ----------
 
+// pure function to random an element of array
+function randomElementPicker(array) {
+  // random an element of array
+  const index = Math.floor(Math.random() * array.length);
+  // return the randomed element
   return array[index];
 }
 
+// pure function to get fortune
 function getFortune() {
+  // array with data
   const places = [
     "Berlin",
     "some tiny island paradise",
@@ -46,9 +52,14 @@ function getFortune() {
     "a house servant for a robot",
     "---pfft work? You've been devoting your life to your passion of miniature crochet"
   ];
+
+  // get random element of array
   const job = randomElementPicker(jobs);
   const place = randomElementPicker(places);
+
+  // return / print it
   return `You'll be celebrating 100 000 GitHub stars on your side project, in the heart of ${place} where you've been working as ${job}!`;
 }
+
 // call and print to console getFortune
 console.log(getFortune());
