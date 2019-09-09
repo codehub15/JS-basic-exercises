@@ -15,12 +15,13 @@
 // 145.089 should round to 145.09
 // 145.085 should round to 145.09
 // 145.085 should round to 145.08
-/* let n1 = 145.089;
+/* // check result to two decimal places
+let n1 = 145.089;
 console.log("145.089 to 145.09 = ", n1.toFixed(2));
 let n2 = 145.085;
 console.log("145.085 to 145.09 = ", n2.toFixed(2));
-let n3 = 143.082;
-console.log("143.085 to 145.08 = ", n3.toFixed(2)); */
+let n3 = 145.082;
+console.log("145.085 to 145.08 = ", n3.toFixed(2)); */
 
 // Note: Because JS is weird, add some code that converts
 // floating points values to an integer that represents cents
