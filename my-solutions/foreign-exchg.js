@@ -65,6 +65,6 @@ let getChfFromEur = amount => {
   return (amount * rate).toFixed(2);
 };
 
-console.log(convertFromEur(100, "JPY"));
-console.log(convertFromEur(100, "AUD"));
-console.log(convertFromEur(100, "CHF"));
+console.log(convertFromEur(105, "JPY"));
+console.log(convertFromEur(105, "AUD"));
+console.log(convertFromEur(105, "CHF"));
