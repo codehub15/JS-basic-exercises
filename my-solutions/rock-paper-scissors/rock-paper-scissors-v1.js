@@ -14,10 +14,14 @@ const gameRockPaperScissors = userArg => {
   }
 };
 console.log(gameRockPaperScissors("paper "));
+console.log(gameRockPaperScissors(5));
 
 // convert user input to lower case and remove spaces
 function improveUserInput(userInput) {
-  const improvedUserInput = userInput.toLowerCase().trim();
+  const improvedUserInput = userInput
+    .toString()
+    .toLowerCase()
+    .trim();
   return improvedUserInput;
 }
 // console.log(improveUserInput("RoCk "));
