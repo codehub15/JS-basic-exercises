@@ -6,7 +6,7 @@ const gameRockPaperScissors = (playerA, playerB) => {
   let inputPlayerB = improveUserInput(playerB);
 
   // check the winner
-  // same input
+  // both players have the same input
   if (inputPlayerA === inputPlayerB) {
     console.log(
       `Player A ${inputPlayerA} and Player B plays ${inputPlayerB} - no win, try again`
@@ -53,7 +53,7 @@ gameRockPaperScissors("paper", "rock");
 // gameRockPaperScissors("rock", "rock");
 // gameRockPaperScissors("paper", 5);
 
-// convert user input to lower case and remove spaces
+// convert user input to lower case and remove spaces (input validator)
 function improveUserInput(userInput) {
   if (!Number(userInput)) {
     const improvedUserInput = userInput.toLowerCase().trim();
