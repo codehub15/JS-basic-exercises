@@ -4,7 +4,11 @@ const gameRockPaperScissors = userArg => {
   // convert user input to lower case and without spaces
   let improvedUserArg = improveUserInput(userArg);
   const words = ["rock", "scissors", "paper"];
-  const wordRandom = words[Math.floor(Math.random() * 3)];
+
+  // get random word from array of words
+  // const wordRandom = words[Math.floor(Math.random() * 3)];
+  // refactor random result of array (from hard coded to dynamic way)
+  const wordRandom = words[Math.floor(Math.random() * words.length)];
 
   // if user input is the same as the word in array, than print random word from array
   // otherwise print default msg
@@ -31,4 +35,5 @@ function improveUserInput(userInput) {
     return userInput;
   }
 }
+// check result of function to convert user input
 // console.log(improveUserInput("RoCk "));
