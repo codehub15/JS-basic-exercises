@@ -14,7 +14,7 @@
 
 // 145.089 should round to 145.09
 // 145.085 should round to 145.09
-// 145.085 should round to 145.08
+// 145.082 should round to 145.08
 /* // check result to two decimal places
 let n1 = 145.089;
 console.log("145.089 to 145.09 = ", n1.toFixed(2));
