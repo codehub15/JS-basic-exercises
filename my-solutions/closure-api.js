@@ -1,22 +1,5 @@
 // closure exercise with CRUD operations
-// Return a function reference
-/* let init = () => {
-  let db = [];
-  let create = elem => {
-    db.push(elem);
-    return db.length;
-  };
-  return create;
-};
 
-let createInDb = init();
-console.log(createInDb("first"));
-console.log(createInDb(2));
-console.log(createInDb("sun"));
- */
-
-// Expose more function references (provide an API)
-// Part one: refactor init
 let init = () => {
   let db = [];
   let api = [];
@@ -37,8 +20,10 @@ let init = () => {
       return (db[index] = elem);
     } else {
       //   return "Error, there is no existing element at the given index!";
-      //   return db.push(elem);
-      return create(elem);
+      return (
+        create(elem) +
+        ` New element added! The new length of the array is ${db.length}.`
+      );
     }
   };
 
@@ -56,5 +41,6 @@ console.log(createInDb[0]("other one"));
 console.log(createInDb[1]()); // access to read
 console.log(createInDb[2](0, "new elem"));
 console.log(createInDb[2](10, 100));
-console.log(createInDb[2](6, "100"));
+console.log(createInDb[2](20, "7"));
+console.log(createInDb[2](15, "sunshine"));
 console.log(createInDb[1]()); // access to read
