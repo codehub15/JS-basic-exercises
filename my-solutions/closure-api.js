@@ -29,8 +29,8 @@ let init = () => {
   let read = () => {
     let dbCopy = [...db];
     return dbCopy;
+    // return db.push(dbCopy); // so you can push value from read
   };
-  read();
 
   api.push(create, read);
   return api;
@@ -41,4 +41,6 @@ let createInDb = init();
 console.log(createInDb[0]("first"));
 console.log(createInDb[0](2));
 console.log(createInDb[0]("sun"));
-console.log(createInDb[1]());
+console.log(createInDb[1]("new")); // from the outside(api) you can not add new element
+console.log(createInDb[0]("other one"));
+console.log(createInDb[1]()); // access to read
