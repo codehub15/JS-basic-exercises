@@ -26,6 +26,13 @@ let init = () => {
     return db.length;
   };
 
+  let read = () => {
+    let dbCopy = [...db];
+    console.log("db copy", dbCopy);
+    return dbCopy;
+  };
+  read();
+
   api.push(create);
   return api;
 };
