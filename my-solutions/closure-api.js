@@ -36,7 +36,9 @@ let init = () => {
     if (db[index]) {
       return (db[index] = elem);
     } else {
-      return "Error, there is no existing element at the given index!";
+      //   return "Error, there is no existing element at the given index!";
+      //   return db.push(elem);
+      return create(elem);
     }
   };
 
@@ -53,5 +55,6 @@ console.log(createInDb[1]("new")); // from the outside(api) you can not add new 
 console.log(createInDb[0]("other one"));
 console.log(createInDb[1]()); // access to read
 console.log(createInDb[2](0, "new elem"));
-console.log(createInDb[2](10, "new elem"));
+console.log(createInDb[2](10, 100));
+console.log(createInDb[2](6, "100"));
 console.log(createInDb[1]()); // access to read
