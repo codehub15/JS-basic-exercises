@@ -1,6 +1,6 @@
 // closure exercise with CRUD operations
 // Return a function reference
-let init = () => {
+/* let init = () => {
   let db = [];
   let create = elem => {
     db.push(elem);
@@ -13,3 +13,25 @@ let createInDb = init();
 console.log(createInDb("first"));
 console.log(createInDb(2));
 console.log(createInDb("sun"));
+ */
+
+// Expose more function references (provide an API)
+// Part one: refactor init
+let init = () => {
+  let db = [];
+  let api = [];
+
+  let create = elem => {
+    db.push(elem);
+    return db.length;
+  };
+
+  api.push(create);
+  return api;
+};
+
+let createInDb = init();
+
+console.log(createInDb[0]("first"));
+console.log(createInDb[0](2));
+console.log(createInDb[0]("sun"));
