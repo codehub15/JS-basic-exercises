@@ -28,12 +28,11 @@ let init = () => {
 
   let read = () => {
     let dbCopy = [...db];
-    console.log("db copy", dbCopy);
     return dbCopy;
   };
   read();
 
-  api.push(create);
+  api.push(create, read);
   return api;
 };
 
@@ -42,3 +41,4 @@ let createInDb = init();
 console.log(createInDb[0]("first"));
 console.log(createInDb[0](2));
 console.log(createInDb[0]("sun"));
+console.log(createInDb[1]());
