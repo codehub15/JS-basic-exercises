@@ -30,7 +30,7 @@ Create all functions as arrow function expressions assigned to constant variable
 
 ### Part one: refactor `init`
 
-1. Refactor your `init` function so it returns an array called `api`.
+1. Refactor your `init` function so it declares a new array called `api` and returns this new array.
 
 2. Before `init` returns, it should push your `create` function into the `api` array.
 
@@ -68,12 +68,12 @@ Create all functions as arrow function expressions assigned to constant variable
 
 ### Part 4: Add `delete`
 
-1. Following the same pattern as above, add a new function to your API called `delete`. This function should:
+1. Following the same pattern as above, add a new function to your API called `remove`. This function should:
   - accept one parameter: the index of the element to delete.
   - delete the db element at the given index if it exists.
   - If there is no existing element at the given index, return an error message.
 
-2. Expose `delete` so it can be accessed from outside the `init` function.
+2. Expose `remove` so it can be accessed from outside the `init` function.
 
 Again, try to hack your db from outside. Can you perform CRUD operations on it without using your API?
 
