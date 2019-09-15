@@ -40,6 +40,14 @@ let init = () => {
 };
 
 let createInDb = init();
+/* 
+// more readable
+let apiDb = init();
+let createDb = apiDb[0];
+let readDb = apiDb[1];
+let updateDb = apiDb[2];
+let deleteDb = apiDb[3]; 
+*/
 
 // add new element to array
 console.log("\n-----add new element to array-----------------------");
