@@ -42,10 +42,17 @@ let init = () => {
 let createInDb = init();
 /* 
 // more readable
+
 let apiDb = init();
+
 let createDb = apiDb[0];
+console.log(createDb("other one"));
+
 let readDb = apiDb[1];
+console.log(readDb());
+
 let updateDb = apiDb[2];
+
 let deleteDb = apiDb[3]; 
 */
 
@@ -77,7 +84,3 @@ console.log(createInDb[3](2));
 // read data after delete element
 console.log("\n-----print array after delete------------------------");
 console.log(createInDb[1]());
-
-// check hacking attempt
-// console.log("\nhacking test");
-// console.log(createInDb[1]("new")); // from the outside(api) you can not add new element
