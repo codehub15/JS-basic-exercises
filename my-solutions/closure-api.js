@@ -84,3 +84,18 @@ console.log(createInDb[3](2));
 // read data after delete element
 console.log("\n-----print array after delete------------------------");
 console.log(createInDb[1]());
+
+// hacking attempt
+console.log("\nhacking");
+console.log(
+  (createInDb[1]()[0] = `
+       ////
+     ^     ~
+    (@)   (@)
+        |     
+       (-)
+`)
+);
+
+console.log("\nafter hacking");
+console.log(createInDb[1]());
