@@ -105,10 +105,63 @@ let capitalized = [];
 console.log(`array with names before: ${names}`);
 do {
   let capitalize =
-    names[namesIndex][0].toUpperCase() + names[namesIndex].substring(1);
+    names[namesIndex][0].toUpperCase() +
+    names[namesIndex].substring(1).toLowerCase();
 
   capitalized.push(capitalize);
 
   ++namesIndex;
 } while (namesIndex < names.length);
 console.log(`array with names after: ${capitalized}`);
+
+console.log("\n# 4 --------------------------------------");
+// 4 No Duplicates
+// A set is a collection of unique items. A set can be formed from an array by removing all duplicate items.
+// Create a program which transforms an array into a set of unique values using a do while loop.
+// See the examples below.
+// Example: [1, 4, 4, 7, 7, 7] ➞ [1, 4, 7]
+
+let collection = [1, 4, 4, 7, 7, 7];
+// let collection = [1, 6, 6, 9, 9];
+// let collection = [7, 8, 7, 8, 10, 1];
+let cltIndex = 0;
+
+collection.sort(function(a, b) {
+  return a - b;
+});
+// let noDuplicates = [];
+// let noDuplicate = "";
+console.log(`collection:\t\t ${collection}`);
+
+do {
+  if (collection[cltIndex - 1] === collection[cltIndex]) {
+    collection.splice(cltIndex, 1);
+  } else {
+    ++cltIndex;
+  }
+} while (cltIndex < collection.length);
+console.log(`no duplicate collection: ${collection}`);
+
+console.log("\n# 5 --------------------------------------");
+// 5 Repeat it
+// Create a program with two variables: "item" and "times".
+// Create a program that repeats the "item" as many times as specified by "times".
+// The first variable ("item") is the item that needs repeating while the second argument ("times") is the number of times the item is to be repeated.
+// Print the result in an array.
+// Example: ("example", 3) ➞ ["example", "example", "example"]
+let item = "";
+// let times = 0;
+let start = 1;
+let results = [];
+
+let repeatIt = (userItem, times) => {
+  do {
+    // console.log("item: ", userItem);
+    item = userItem;
+    results.push(item);
+
+    ++start;
+  } while (start <= times);
+  return results;
+};
+console.log(repeatIt("example", 3));
