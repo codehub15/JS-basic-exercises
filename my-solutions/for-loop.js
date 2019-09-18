@@ -131,36 +131,76 @@ bonusFor8();
 
 // 9
 console.log(`\n# 9`);
-const exercise9 = () => {
-  let result = 0;
-  // 1
-  console.log(`\n# 1`);
+// 9.1
+console.log(`# 9.1`);
+const exercise9a = () => {
+  let result = "";
   for (let i = 1; i <= 10; i += 1) {
-    result = i * 100;
-    console.log(`${result}`);
+    result += i * 100 + " ";
   }
-  // 2
-  console.log(`\n# 2`);
-  for (let i = 1; i <= 8; i += 1) {
-    result = (i += 1) * 2;
-    console.log(`${result}`);
-  }
-  // 3
-  console.log(`\n# 3`);
-  for (let i = 0; i <= 5; i += 1) {
-    result = i * 2;
-    console.log(`${result}`);
-  }
-  // 4
-  console.log(`\n# 4`);
-  for (let i = 1; i <= 5; i += 1) {
-    result = i * 3;
-    console.log(`${result}`);
-  }
-  // 5
-  console.log(`\n# 5`);
-  for (let i = 9; i >= 0; i -= 1) {
-    console.log(`${i}`);
-  }
+  console.log(`${result}`);
 };
-exercise9();
+exercise9a();
+
+// 9.2
+console.log(`\n# 9.2`);
+const exercise9b = () => {
+  let str = "";
+  let result = 1;
+
+  for (let i = 1; i <= 8; i += 1) {
+    str += result + " ";
+    result *= 2;
+  }
+  console.log(`${str}`);
+};
+exercise9b();
+
+// 9.3
+console.log(`\n# 9.3`);
+const exercise9c = () => {
+  let result = "";
+  for (let i = 0; i <= 5; i += 1) {
+    result += i * 2 + " ";
+  }
+  console.log(`${result}`);
+};
+exercise9c();
+
+// 9.4
+console.log(`\n# 9.4`);
+const exercise9d = () => {
+  let result = "";
+  for (let i = 1; i <= 5; i += 1) {
+    result += i * 3 + " ";
+  }
+  console.log(`${result}`);
+};
+exercise9d();
+
+// 9.5
+console.log(`\n# 9.5`);
+const exercise9e = () => {
+  let result = "";
+  for (let i = 9; i >= 0; i -= 1) {
+    result += i + " ";
+  }
+  console.log(`${result}`);
+};
+exercise9e();
+
+// 10 isPalindrome
+console.log(`\n# 10`);
+const exercise10 = param => {
+  let palindrome = param.toLowerCase();
+
+  for (let i = 0; i < palindrome.length; i += 1) {
+    if (palindrome[i] !== palindrome[palindrome.length - 1 - i]) {
+      return false;
+    }
+  }
+
+  return true;
+};
+console.log(exercise10("madam"));
+console.log(exercise10("madame"));
