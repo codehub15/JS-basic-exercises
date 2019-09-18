@@ -165,3 +165,33 @@ let repeatIt = (userItem, times) => {
   return results;
 };
 console.log(repeatIt("example", 3));
+
+console.log("\n# 6 --------------------------------------");
+// 6 Factors
+// let factors = [1, 2, 4, 8, 16, 32];
+// let factors = [1, 1, 1, 1, 1, 1];
+// let factors = [2, 4, 6, 7, 12];
+// let factors = [10, 1];
+let factors = [3, 6, 12, 36];
+let fIndx = 0;
+let isFactor = true;
+console.log("array with factors ", factors);
+do {
+  if (factors[fIndx] % 2 === 0 && factors[fIndx] % factors[fIndx - 1] === 0) {
+    /*  
+   // debugging
+    console.log("if ", factors[fIndx] % factors[fIndx - 1] === 0);
+    console.log(
+      "if 2 ",
+      factors[fIndx] % 2 === 0 && factors[fIndx] % factors[fIndx - 1] === 0,
+      "\n"
+    ); 
+    */
+    // return true
+    isFactor = true;
+  } else {
+    isFactor = false;
+  }
+  ++fIndx;
+} while (fIndx < factors.length);
+console.log("array is a factor: ", isFactor);
