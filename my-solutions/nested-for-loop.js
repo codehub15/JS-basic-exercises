@@ -65,8 +65,6 @@ for (let i = 0; i < 4; i += 1) {
   asterisks = "";
   for (let j = 0; j <= i; j += 1) {
     asterisks += "*";
-
-    // console.log(`j ${j} * ${asterisks} `);
   }
   console.log(asterisks);
 }
