@@ -8,7 +8,7 @@ const exercise1 = () => {
     result += i;
     console.log(`${i}: result is ${result}`);
   }
-  console.log(`result is ${result}`);
+  console.log(`end result is ${result}`);
 };
 exercise1();
 
@@ -17,7 +17,16 @@ console.log(`\n# 2`);
 const exercise2 = () => {
   let numbers = ["one", "two", "three", "four", "five"];
   for (let i = 0; i < 5; i += 1) {
-    console.log(`There is one bottle of beer on the wall ${numbers[i]}`);
+    switch (numbers[i]) {
+      case "one":
+        console.log(`There is ${numbers[i]} bottle of beer on the wall`);
+      case "two":
+      case "three":
+      case "four":
+      case "five":
+        console.log(`There are ${numbers[i]} bottles of beer on the wall`);
+        break;
+    }
   }
 };
 exercise2();
@@ -44,13 +53,14 @@ const exercise4 = () => {
     result = i * 9;
     console.log(`${i} * 9 = ${result}`);
 
-    // better way without variable result
+    // shorter without variable result
     // console.log(`${i} * 9 = ${i * 9}`);
   }
 };
 exercise4();
 
-// bonus
+// bonus for exercise 4
+// nested for loop to show the tables for every multiplier from 1 to 10
 console.log(`\n# bonus for exercise 4`);
 const bonusFor4 = () => {
   for (let i = 1; i <= 10; i += 1) {
@@ -96,33 +106,29 @@ console.log(`\n# 7`);
 const exercise7 = () => {
   let result = 0;
   for (let i = 0; i <= 1000; i += 1) {
-    result += 1;
-    if (result < 1000) {
-      result = i * 3;
-      console.log(`* 3 ${result}`);
-    }
-    if (result < 1000) {
-      result = i * 5;
-      console.log(`* 5 ${result}`);
+    if (i % 3 === 0 && i % 5 === 0) {
+      result += i;
     }
   }
+  console.log(`${result}`);
 };
 exercise7();
 
-// 8
+// 8  loop over the array / traverse through the array
 console.log(`\n# 8`);
 const exercise8 = () => {
-  let names = ["Alex", "Anna", "Vlada", "Nikita", "Alina"];
+  let names = ["Alex", "Anna", "Vlada", "Kristina", "Nikita"];
   for (let i = 0; i < names.length; i += 1) {
     console.log(`Hallo ${names[i]}`);
   }
 };
 exercise8();
 
-// 9 bonus for exercise 9
-console.log(`\n# bonus for 8`);
+// bonus for exercise 8
+// print the indexes of each item in the array
+console.log(`\n# bonus for exercise 8`);
 const bonusFor8 = () => {
-  let names = ["Alex", "Pavel", "Anna", "Vlada", "Sofia", "Nikita", "Lida"];
+  let names = ["Alex", "Anna", "Vlada", "Kristina", "Nikita"];
   for (let i = 0; i < names.length; i += 1) {
     console.log(`${names[i]} is on index ${i}`);
   }
@@ -193,14 +199,16 @@ exercise9e();
 console.log(`\n# 10`);
 const exercise10 = param => {
   let palindrome = param.toLowerCase();
+  let isPalindrome = false;
 
   for (let i = 0; i < palindrome.length; i += 1) {
     if (palindrome[i] !== palindrome[palindrome.length - 1 - i]) {
-      return false;
+      isPalindrome = false;
+      return `Is ${palindrome} a palindrome? ${isPalindrome}`;
     }
   }
-
-  return true;
+  isPalindrome = true;
+  return `Is ${palindrome} a palindrome? ${isPalindrome}`;
 };
 console.log(exercise10("madam"));
 console.log(exercise10("madame"));
