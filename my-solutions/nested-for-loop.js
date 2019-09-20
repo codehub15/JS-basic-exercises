@@ -31,21 +31,13 @@ let result = "";
 for (let i = 0; i < 3; i += 1) {
   result = "";
   for (let j = 0; j < 5; j += 1) {
-    // all even
-    if (j % 2 === 0 && i % 2 === 0) {
+    // all even or all odd
+    if ((j % 2 === 0 && i % 2 === 0) || (j % 2 !== 0 && i % 2 !== 0)) {
       result += "-";
     }
-    // j is even & i is odd
-    else if (j % 2 === 0 && i % 2 !== 0) {
+    // j is even & i is odd or j is odd & i is even
+    else if ((j % 2 === 0 && i % 2 !== 0) || (j % 2 !== 0 && i % 2 === 0)) {
       result += "|";
-    }
-    // j is odd & i is even
-    else if (j % 2 !== 0 && i % 2 === 0) {
-      result += "|";
-    }
-    // all odd
-    else if (j % 2 !== 0 && i % 2 !== 0) {
-      result += "-";
     }
   }
   console.log(result);
@@ -69,7 +61,7 @@ for (let i = 0; i < 4; i += 1) {
   console.log(asterisks);
 }
 
-//
+// 4
 console.log(`\n# 4`);
 /*
 the goal:
