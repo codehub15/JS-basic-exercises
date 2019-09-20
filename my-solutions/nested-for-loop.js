@@ -1,9 +1,8 @@
 // nested for loop
 
-// 1
-console.log(`\n# 1`);
+// 1 goal
+console.log(`\n# 1\n`);
 /* 
-the goal:
 |||||
 |||||
 |||||
@@ -18,39 +17,39 @@ for (let i = 0; i < 4; i += 1) {
   console.log(pipes);
 }
 
-// 2
-console.log(`\n# 2`);
+// 2 goal
+console.log(`\n# 2\n`);
 /*
-the goal:
 -|-|-
 |-|-|
 -|-|-
 */
-let result = "";
+let muster = "";
 
 for (let i = 0; i < 3; i += 1) {
-  result = "";
+  muster = "";
   for (let j = 0; j < 5; j += 1) {
     // all even or all odd
     if ((j % 2 === 0 && i % 2 === 0) || (j % 2 !== 0 && i % 2 !== 0)) {
-      result += "-";
+      muster += "-";
     }
     // j is even & i is odd or j is odd & i is even
     else if ((j % 2 === 0 && i % 2 !== 0) || (j % 2 !== 0 && i % 2 === 0)) {
-      result += "|";
+      muster += "|";
     }
   }
-  console.log(result);
+  console.log(muster);
 }
 
-// 3
-console.log(`\n# 3`);
+// 3 goal
+console.log(`\n# 3\n`);
 /*
-the goal:
+
 *
 **
 ***
 ****
+
 */
 let asterisks = "";
 for (let i = 0; i < 4; i += 1) {
@@ -61,20 +60,55 @@ for (let i = 0; i < 4; i += 1) {
   console.log(asterisks);
 }
 
-// 4
-console.log(`\n# 4`);
+// 4 goal
+console.log(`\n# 4\n`);
 /*
-the goal:
+
 ****
 ***
 **
 *
+
 */
 let asterisksReversed = "";
 for (let i = 0; i < 4; i += 1) {
   asterisksReversed = "";
-  for (let j = 4; j >= i; j -= 1) {
+  for (let j = 3; j >= i; j -= 1) {
     asterisksReversed += "*";
   }
   console.log(asterisksReversed);
+}
+
+// 5 goal
+console.log("\n5\n");
+
+//    *
+//   * *
+//  * * *
+//  * * * *
+// * * * * *
+
+let starTree = "";
+let n = 5;
+for (let i = 1; i <= n; i++) {
+  starTree = "";
+  for (let j = 1; j <= 2 * n - 1; j++) {
+    j >= n + 1 - i && j <= n - 1 + i ? (starTree += "*") : (starTree += " ");
+  }
+  console.log(starTree);
+}
+
+// another way
+console.log();
+
+let starTree2 = "";
+for (let i = 0; i < 5; i++) {
+  starTree2 = "";
+  for (let j = 0; j < 5 - i; j++) {
+    starTree2 += " ";
+  }
+  for (let k = 0; k <= i; k++) {
+    starTree2 += "* ";
+  }
+  console.log(starTree2);
 }
