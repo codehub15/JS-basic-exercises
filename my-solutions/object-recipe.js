@@ -10,8 +10,8 @@ On separate lines (one console.log statement for each), log the recipe informati
 -cumin
 -cocoa
 */
-let recipe = {
-  name: "yummy",
+const recipe = {
+  name: "some recipe",
   serves: 2,
   ingredients: ["cinnamon", "cumin", "cocoa", "sugar", "egg", "flour", "milk"],
   preparingTime: 15,
