@@ -29,11 +29,11 @@ const books = [
   }
 ];
 
-for (let i = 0; i < books.length; i += 1) {
+/* for (let i = 0; i < books.length; i += 1) {
   console.log(`The ${books[i]["title"]} by ${books[i].author}`);
 }
+*/
 
-console.log();
 for (let i = 0; i < books.length; i += 1) {
   if (books[i]["alreadyRead"]) {
     console.log(
@@ -43,5 +43,30 @@ for (let i = 0; i < books.length; i += 1) {
     console.log(
       `You still need to read "The ${books[i]["title"]} by ${books[i].author}"`
     );
+  }
+}
+
+console.log("\nanother version\n");
+
+// another version
+var books2 = [
+  {
+    title: "The Design of EveryDay Things",
+    author: "Don Norman",
+    alreadyRead: false
+  },
+  {
+    title: "The Most Human Human",
+    author: "Brian Christian",
+    alreadyRead: true
+  }
+];
+for (var i = 0; i < books2.length; i++) {
+  var book = books2[i];
+  var bookInfo = book.title + '" by ' + book.author;
+  if (book.alreadyRead) {
+    console.log('You already read "' + bookInfo);
+  } else {
+    console.log('You still need to read "' + bookInfo);
   }
 }
