@@ -35,7 +35,7 @@ for (let i = 0; i < books.length; i += 1) {
 
 console.log();
 for (let i = 0; i < books.length; i += 1) {
-  if (books[i]["alreadyRead"] === true) {
+  if (books[i]["alreadyRead"]) {
     console.log(
       `You already read "The ${books[i]["title"]} by ${books[i].author}"`
     );
