@@ -1,4 +1,6 @@
-const computer = {
+// example with 'in operator', 'delete' and add a value
+
+const notebook = {
   name: "acer",
   model: "Swift 5",
   cpu: "Intel Core™ i5",
@@ -10,17 +12,16 @@ const computer = {
 
 // check if the specified property is in the specified object with in operator
 console.log("\nin operator");
-console.log("model" in computer);
+console.log(`Is a property in object? ${"model" in notebook}`);
 
-// delete a property
-console.log(`\ndelete this: ${computer.model}`);
-delete computer.model;
+// delete a property from object
+console.log(`\ndelete this: ${notebook.model}`);
+delete notebook.model;
 
-// add a new property with value if it is no one
 console.log("\nadd");
-
-if ("model" in computer === false) {
-  computer.model = "Swift 5";
+// add a property if this property is not in object
+if ("model" in notebook === false) {
+  notebook.model = "Swift 5";
 }
-
-console.log(computer.model);
+// print added property
+console.log(notebook.model);
