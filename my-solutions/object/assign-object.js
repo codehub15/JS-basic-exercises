@@ -1,6 +1,9 @@
-// assign to object
-// assign combine objects all properties and merge to one object
-// the source will never change, only target will change
+/* 
+Object.assign() is one method which is used
+- to copy the values and properties from one or more source objects to a target object (return a target object)
+- for cloning an object
+- to merge object with same properties (if they have a same key, properties in a target object will be overwritten overwrite )
+*/
 
 const target = {
   name: "John",
