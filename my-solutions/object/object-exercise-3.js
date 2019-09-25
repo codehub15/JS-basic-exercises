@@ -94,7 +94,7 @@ console.log(jan.employed);
 
 for (let i = 0; i < personArr.length; i++) {
   let person = personArr[i];
-  if (person.employed) {
+  if (person.employed && person.age > 30) {
     console.log(`${personArr[i]["firstName"]} is employed.`);
   }
 }
@@ -107,3 +107,9 @@ for (let i = 0; i < personArr.length; i++) {
     `All people: ${person.firstName} ${person.lastName} is ${person.age} years old and is employed ${person.employed}`
   );
 }
+
+// adding method outside object (constructor)
+anna.greeting = function() {
+  return `Hi, I'm ${this.firstName}.`;
+};
+console.log(anna.greeting());
