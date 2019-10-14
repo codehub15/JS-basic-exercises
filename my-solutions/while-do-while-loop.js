@@ -121,14 +121,14 @@ console.log("\n# 4 --------------------------------------");
 // See the examples below.
 // Example: [1, 4, 4, 7, 7, 7] ➞ [1, 4, 7]
 
-let collection = [1, 4, 4, 7, 7, 7];
-// let collection = [1, 6, 6, 9, 9];
+// let collection = [1, 4, 4, 7, 7, 7];
+let collection = [1, 6, 6, 9, 9];
 // let collection = [7, 8, 7, 8, 10, 1];
 let cltIndex = 0;
 
-collection.sort(function(a, b) {
+/* collection.sort(function(a, b) {
   return a - b;
-});
+}); */
 // let noDuplicates = [];
 // let noDuplicate = "";
 console.log(`collection:\t\t ${collection}`);
@@ -178,16 +178,6 @@ let isFactor = true;
 console.log("array with factors ", factors);
 do {
   if (factors[fIndx] % 2 === 0 && factors[fIndx] % factors[fIndx - 1] === 0) {
-    /*  
-   // debugging
-    console.log("if ", factors[fIndx] % factors[fIndx - 1] === 0);
-    console.log(
-      "if 2 ",
-      factors[fIndx] % 2 === 0 && factors[fIndx] % factors[fIndx - 1] === 0,
-      "\n"
-    ); 
-    */
-    // return true
     isFactor = true;
   } else {
     isFactor = false;
