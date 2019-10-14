@@ -75,6 +75,9 @@ function Person(firstName, lastName, age, employed) {
   this.lastName = lastName;
   this.age = age;
   this.employed = employed;
+  this.greeting = function() {
+    return `Hi, I'm ${this.firstName}`;
+  };
 }
 
 const kristina = new Person("Kristina", "Del", 35, true);
@@ -113,3 +116,5 @@ anna.greeting = function() {
   return `Hi, I'm ${this.firstName}.`;
 };
 console.log(anna.greeting());
+
+console.log(markus.greeting());
