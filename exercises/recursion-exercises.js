@@ -10,7 +10,7 @@ const handshakes = people => { // 3
         // shake everybody's hand except your own (people - 1)
         // and add the handshakes that happen between everybody else
         const numberOfShakes = people - 1 + handshakes(people - 1);
-        //                     3      - 1 + 1; // handshakes(2)
+        //                     3      - 1 + handshakes(3 - 1)
         return numberOfShakes;
     }
 };
@@ -23,8 +23,8 @@ const handshakes = people => { // 3
 
 // Use recursion to calculate the factorial of a given number.
 // Examples and expected output: 
-// factorial(3) should calculate 3 * 2 * 1  and return 9
-// factorial(4) should calculate 4 * 3 * 2 * 1 and return 36
+// factorial(3) should calculate 3 * 2 * 1  and return 6
+// factorial(4) should calculate 4 * 3 * 2 * 1 and return 24
 
 // https://www.mathsisfun.com/numbers/factorial.html
 const factorial = num => {
