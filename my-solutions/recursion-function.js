@@ -8,8 +8,8 @@ console.log("\nFactorial");
 
 // https://www.mathsisfun.com/numbers/factorial.html
 const factorial = num => {
-  if (num == 0) {
-    return 1;
+  if (num === 1) {
+    return num;
   } else {
     return num * factorial(num - 1);
   }
@@ -19,6 +19,8 @@ const factorial = num => {
 for (let i = 1; i <= 8; i++) {
   console.log(`${i}! === ${factorial(i)}`);
 }
+// debugging
+// console.log(`5! === ${factorial(5)}`);
 
 // ----------------------------------------------------------------
 
