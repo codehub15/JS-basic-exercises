@@ -11,9 +11,9 @@ const sumOfNumbers = nums => {
     sum += nums[i];
     console.log(`sum at position ${i}: is ${sum}`);
   }
-  return `sum in total is ${sum}`;
+  console.log(`sum in total is ${sum}`);
 };
-console.log(sumOfNumbers([1, 2, 3, 5]));
+sumOfNumbers([1, 2, 3, 4, 5]); // 15
 
 // --------------------------------------------------------------
 
@@ -38,7 +38,7 @@ const cityName = () => {
   let joinedCities = cities.join();
   console.log(joinedCities);
 };
-cityName();
+cityName(); // Berlin,Barcelona,Prague,Rome
 
 // --------------------------------------------------------------
 
@@ -46,20 +46,20 @@ cityName();
 console.log("\nexercise 4: Odds and Evens");
 
 const oddsAndEvents = arr => {
-  let invertedArray = [];
+  let newArray = [];
   for (let i = 0; i < arr.length; i++) {
     if (arr[i] % 2 === 1) {
       let elem = (result = arr[i] + 1);
-      invertedArray.push(elem);
+      newArray.push(elem);
     } else {
       let elem = (result = arr[i] - 1);
-      invertedArray.push(elem);
+      newArray.push(elem);
     }
   }
-  console.log(invertedArray);
+  console.log(newArray);
 };
-oddsAndEvents([3, 5, 2, 4]);
-oddsAndEvents([6, 9, 10, 20]);
+oddsAndEvents([3, 5, 2, 4]); // [4, 6, 1, 3]
+oddsAndEvents([6, 9, 10, 20]); // [5, 10, 9, 19]
 
 // --------------------------------------------------------------
 
@@ -78,7 +78,7 @@ const capitalize = names => {
   console.log(modifiedNames);
 };
 
-capitalize(["samuel", "MARIA", "luke", "mary"]);
+capitalize(["samuel", "MARIA", "luke", "mary"]); // ["Samuel", "Maria", "Luke", "Mary"]
 
 // --------------------------------------------------------------
 
@@ -95,10 +95,10 @@ const removeDuplicates = collection => {
   }
   console.log(noDuplicates);
 };
-removeDuplicates([1, 4, 4, 7, 7, 7]);
-removeDuplicates([1, 6, 6, 9, 9]);
-removeDuplicates([2, 2, 2, 2, 2, 2]);
-removeDuplicates([5, 10, 15, 20, 25]);
+removeDuplicates([1, 4, 4, 7, 7, 7]); // [ 1, 4, 7 ]
+removeDuplicates([1, 6, 6, 9, 9]); // [1, 6, 9]
+removeDuplicates([2, 2, 2, 2, 2, 2]); //  [2]
+removeDuplicates([5, 10, 15, 20, 25]); // [5, 10, 15, 20, 25]
 
 // --------------------------------------------------------------
 
