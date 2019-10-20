@@ -1,9 +1,11 @@
-// define object property
+// Object.defineProperty()
+
+// object property definition
 const obj = {
   counter: 0
 };
 
-// define getter
+// getter definition
 
 // reset
 Object.defineProperty(obj, "reset", {
@@ -26,7 +28,7 @@ Object.defineProperty(obj, "decrement", {
   }
 });
 
-// define setter
+// setter definition
 
 // add
 Object.defineProperty(obj, "add", {
@@ -42,7 +44,7 @@ Object.defineProperty(obj, "subtract", {
   }
 });
 
-// call
+// call and change value of object property 'counter'
 console.log(obj.counter);
 
 // increment
