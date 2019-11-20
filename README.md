@@ -1,1 +1,3 @@
-# programming-basics
+# Programming Basics JavaScript 
+
+## Exercises and Solutions
